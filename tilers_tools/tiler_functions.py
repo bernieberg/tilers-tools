@@ -463,7 +463,7 @@ def link_or_copy(src, dst):
         except (OSError, AttributeError): # non POSIX or cross-device link?
             try:
                 shutil.copy(src, dst)
-            except shutil.Error, shutil_exception:
+            except shutil.Error as shutil_exception:
                 raise shutil_exception
 
 def copy_viewer(dest):
